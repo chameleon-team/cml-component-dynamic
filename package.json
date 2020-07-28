@@ -1,0 +1,19 @@
+{
+  "name": "cml-component-dynamic",
+  "version": "1.0.0",
+  "description": "A chameleon project",
+  "author": "",
+  "private": true,
+  "scripts": {},
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-chameleon-import": "^1.0.6",
+    "babel-plugin-import": "^1.13.0",
+    "chameleon-api": "1.0.0",
+    "chameleon-api-miniapp": "^1.0.0",
+    "chameleon-runtime": "1.0.0",
+    "chameleon-store": "1.0.0",
+    "chameleon-ui-builtin": "1.0.0",
+    "cml-ui": "1.0.0"
+  }
+}
