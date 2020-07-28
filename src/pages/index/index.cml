@@ -1,11 +1,11 @@
 <template>
   <page title="chameleon">
-      <scroller height="{{-1}}">
+      <!-- <scroller height="{{-1}}"> -->
         <view class="scroller-wrap">
           <demo-com title="{{title}}" image-src="{{chameleonSrc}}"></demo-com>
           <view c-bind:tap="handTap">xxxxhandTap</view>
         </view>
-      </scroller>
+      <!-- </scroller> -->
   </page>
 </template>
 

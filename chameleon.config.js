@@ -13,9 +13,11 @@ cml.config.merge({
   },
   wx: {
     dev: {
+      // analysis: true,
     },
     build: {
-      apiPrefix
+      apiPrefix,
+      // analysis: true,
     }
   },
   web: {

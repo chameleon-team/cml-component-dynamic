@@ -59,21 +59,21 @@ function _default({
           plugins = opts.map(({
             libraryName,
             libraryDirectory,
+            defaulLibraryDirectory,
             style,
-            styleLibraryDirectory,
-            customStyleName,
             camel2DashComponentName,
             camel2UnderlineComponentName,
-            fileName,
+            libraryFileName,
             customName,
-            transformToDefaultImport
+            transformToDefaultImport,
+            defaulLibraryFileName
           }, index) => {
             (0, _assert.default)(libraryName, 'libraryName should be provided');
-            return new _Plugin.default(libraryName, libraryDirectory, style, styleLibraryDirectory, customStyleName, camel2DashComponentName, camel2UnderlineComponentName, fileName, customName, transformToDefaultImport, types, index);
+            return new _Plugin.default(libraryName, libraryDirectory, style, camel2DashComponentName, camel2UnderlineComponentName, libraryFileName, customName, transformToDefaultImport, types, index, defaulLibraryDirectory, defaulLibraryFileName);
           });
         } else {
           (0, _assert.default)(opts.libraryName, 'libraryName should be provided');
-          plugins = [new _Plugin.default(opts.libraryName, opts.libraryDirectory, opts.style, opts.styleLibraryDirectory, opts.customStyleName, opts.camel2DashComponentName, opts.camel2UnderlineComponentName, opts.fileName, opts.customName, opts.transformToDefaultImport, types)];
+          plugins = [new _Plugin.default(opts.libraryName, opts.libraryDirectory, opts.style, opts.camel2DashComponentName, opts.camel2UnderlineComponentName, opts.libraryFileName, opts.customName, opts.transformToDefaultImport, types, null, opts.defaulLibraryDirectory, opts.defaulLibraryFileName)];
         }
       }
 
@@ -85,7 +85,7 @@ function _default({
     }
 
   };
-  const methods = ['ImportDeclaration', 'CallExpression', 'MemberExpression', 'Property', 'VariableDeclarator', 'ArrayExpression', 'LogicalExpression', 'ConditionalExpression', 'IfStatement', 'ExpressionStatement', 'ReturnStatement', 'ExportDefaultDeclaration', 'BinaryExpression', 'NewExpression', 'ClassDeclaration'];
+  const methods = ['ImportDeclaration', 'CallExpression', 'MemberExpression', 'Property', 'VariableDeclarator', 'ArrayExpression', 'LogicalExpression', 'ConditionalExpression', 'IfStatement', 'ExpressionStatement', 'ReturnStatement', 'ExportDefaultDeclaration', 'BinaryExpression', 'NewExpression', 'Identifier'];
   const ret = {
     visitor: {
       Program
