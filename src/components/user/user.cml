@@ -1,24 +1,13 @@
 <template>
   <view class="demo-com">
-    <text class="title">demo-com2{{title}}</text>
-    <image src="{{imageSrc}}" class="logo"></image>  
+    <text class="title">this is user</text>
   </view>
 </template>
 
 <script>
 
-class DemoCom {
-  props = {
-    title: {
-      type: String,
-      default: ''
-    },
-    imageSrc: {
-      type: String,
-      default: ''
-    },
-  }
-
+class User {
+  
   data = {
   }
 
@@ -50,7 +39,7 @@ class DemoCom {
   }
 }
 
-export default new DemoCom();
+export default new User();
 </script>
 <style>
 .demo-com {

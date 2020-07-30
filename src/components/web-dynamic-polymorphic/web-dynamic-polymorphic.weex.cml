@@ -1,0 +1,36 @@
+<template>
+  <view>
+    <text>weex端自定义组件</text>
+    <text>props:{{name}}</text>
+  </view>
+</template>
+
+<script>
+
+class WebDynamicComponent implements WebDynamicComponentInterface {
+  props = {
+    name: {
+      type: String,
+      default: '默认值'
+    }
+  }
+
+  mounted() {
+    
+  }
+}
+
+export default new WebDynamicComponent();
+</script>
+
+<style >
+
+</style>
+
+<script cml-type="json">
+{
+  "base": {
+    "usingComponents": {}
+  }
+}
+</script>

@@ -3,8 +3,14 @@
   "domain": "https://www.chameleon.com",
   "routes":[
     {
-      "url": "/cml/h5/index",
-      "path": "/pages/index/index",
+      "url": "/cml/h5/index1",
+      "path": "/pages/index/new-dynamic-use",
+      "name": "首页",
+      "mock": "index.php"
+    },
+    {
+      "url": "/cml/h5/index2",
+      "path": "/pages/index/old-dynamic-use",
       "name": "首页",
       "mock": "index.php"
     }

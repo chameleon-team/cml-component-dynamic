@@ -1,37 +1,27 @@
 <template>
-  <!-- <page title="chameleon"> -->
-      <!-- <scroller height="{{-1}}"> -->
+  <page title="chameleon">
+      <scroller height="{{-1}}">
         <view class="scroller-wrap">
-          <demo-com title="{{title}}" image-src="{{chameleonSrc}}"></demo-com>
-          <view c-bind:tap="handTap">xxxxhandTap</view>
-          <demo-com2></demo-com2>
           <c-toast show="{{true}}" message="加载中..." mask="{{true}}"></c-toast>
+          <web-dynamic></web-dynamic>
         </view>
-      <!-- </scroller> -->
-  <!-- </page> -->
+      </scroller>
+  </page>
 </template>
 
 <script>
-// import miniappApi from 'chameleon-api-miniapp';
 import cml from 'chameleon-api'
 class Index  {
   data = {
-    title: "chameleon",
-    chameleonSrc: require('../../assets/images/chameleon.png')
+    
   }
   methods = {
     handTap(){
-      // miniappApi.showToast({
-      //   title:'this is title'
-      // });
-      cml.setTitle({
-        message:'xxx'
-      })
+      
     }
   }
   components = {
-    // 'demo-com2':() => import(/* webpackChunkName: "group-foo" */ '../../components/demo-com2/demo-com2.cml')
-    // 'demo-com2':() => import('../../components/demo-com2/demo-com2.cml')
+    
   }
 }
 
@@ -51,9 +41,7 @@ export default new Index();
 {
   "base": {
     "usingComponents": {
-      "demo-com": "/components/demo-com/demo-com",
-      "demo-com2": "/components/demo-com2/demo-com2?dynamic=1&chunkName=demo-com2",
-       "c-toast": "cml-ui/components/c-toast/c-toast?dynamic=1&chunkName=c-toast"
+       "web-dynamic": "/components/web-dynamic/web-dynamic"
     }
   },
   "wx": {
