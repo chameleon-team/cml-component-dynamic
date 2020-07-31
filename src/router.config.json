@@ -3,16 +3,30 @@
   "domain": "https://www.chameleon.com",
   "routes":[
     {
-      "url": "/cml/h5/index1",
-      "path": "/pages/index/new-dynamic-use",
+      "url": "/cml/h5/index",
+      "path": "/pages/index/index",
       "name": "首页",
       "mock": "index.php"
     },
     {
-      "url": "/cml/h5/index2",
-      "path": "/pages/index/old-dynamic-use",
-      "name": "首页",
+      "url": "/cml/h5/new-dynamic-use",
+      "path": "/pages/index/new-dynamic-use",
+      "name": "动态组件使用",
       "mock": "index.php"
+    },
+    {
+      "url": "/cml/h5/old-dynamic-use",
+      "path": "/pages/index/old-dynamic-use",
+      "name": "在多态组件中使用动态组件",
+      "mock": "index.php"
+    },
+    {
+      "url": "/cml/h5/dynamic-router",
+      "path": "/pages/index/dynamic-router",
+      "name": "路由懒加载",
+      "mock": "index.php",
+      "dynamic":"1",
+      "chunkName":"dynamic-router"
     }
   ]
 }

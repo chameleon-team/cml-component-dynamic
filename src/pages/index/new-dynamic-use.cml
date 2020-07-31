@@ -2,7 +2,6 @@
   <page title="chameleon">
       <scroller height="{{-1}}">
         <view class="scroller-wrap">
-          <c-toast show="{{true}}" message="加载中..." mask="{{true}}"></c-toast>
           <web-dynamic></web-dynamic>
         </view>
       </scroller>

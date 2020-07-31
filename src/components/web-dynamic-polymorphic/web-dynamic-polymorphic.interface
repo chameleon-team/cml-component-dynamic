@@ -11,9 +11,6 @@
 */
 
 //定义事件detail对象的参数
-type EventDetail = {
-  value: String
-}
 interface WebDynamicComponentInterface {
   name: String,
 }

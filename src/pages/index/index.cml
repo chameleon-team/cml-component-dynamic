@@ -1,18 +1,43 @@
 <template>
-  <view class="scroller-wrap">
-    <text>升级chameleon-cli之后，我们支持在 usingComponents 中对应路径中配置查询字符串 ?dynamic=1 表示该组件是动态加载的</text>
-    <home></home>
-  </view>
+  <page title="chameleon">
+      <scroller height="{{-1}}">
+        <view class="scroller-wrap">
+          <view c-for="{{routes}}">
+            <text c-bind:tap="jumpTo(item)">{{item.name}}</text>
+
+          </view>
+        </view>
+      </scroller>
+  </page>
 </template>
 
 <script>
 import cml from 'chameleon-api'
 class Index  {
   data = {
+    routes:[
+      {
+        name:'动态组件使用',
+        path:'/pages/index/new-dynamic-use'
+      },
+      {
+        name:'在多态组件中使用动态组件',
+        path:'/pages/index/new-dynamic-use'
+      },
+      {
+        name:'路由懒加载',
+        path:'/pages/index/dynamic-router'
+      }
+    ]
   }
   methods = {
-    
+    jumpTo(item){
+      cml.navigateTo({
+        path:item.path
+      })
+    }
   }
+  
 }
 
 export default new Index();
@@ -31,7 +56,6 @@ export default new Index();
 {
   "base": {
     "usingComponents": {
-      "home": "/components/home/home?dynamic=1&chunkName=home"
     }
   },
   "wx": {
