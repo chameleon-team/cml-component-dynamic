@@ -9,7 +9,7 @@ title:如何使用web端组件的动态加载和路由懒加载来降低web端�
 
 那么如何在CML项目中使用异步组件呢？
 
-> 第一种方式，未升级最新的chameleon-tool
+> 第一种方式，chameleon-tool@1.0.8-alpha.0之前
 
 可以在 多态组件中，即`xxx.web.cml`中声明对应的组件即可，基本使用方式如下,可以参考本仓库中 `web-dynamic-polymorphic.web.cml` 
 
@@ -26,7 +26,7 @@ class WebDynamicComponent implements WebDynamicComponentInterface {
 export default new WebDynamicComponent();
 ```
 
-> 第二种，升级最新的 chameleon-tool 之后
+> 第二种，升级 chameleon-tool@1.0.8-alpha.0 之后
 
 我们支持了在引入的组件后面添加查询字符串，目前支持的字段包括
 
